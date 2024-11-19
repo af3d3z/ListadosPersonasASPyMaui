@@ -1,0 +1,25 @@
+﻿@using ListadoPersonasENT;
+@model List<Persona>;
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Persona persona in Model){
+            <tr>
+                <td>@persona.Id</td>
+                <td>@persona.Nombre</td>
+                <td>@persona.Apellido</td>
+                <td>@persona.FechaNac</td>
+                <td>@persona.Edad</td>
+            </tr>
+        }
+    </tbody>
+</table>
